@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -12,6 +13,39 @@
     </style>
 </head>
 <body>
+
+    <script>
+        //window.fcWidget.setExternalId("john.doe1987");
+    
+    window.fcWidget.user.setFirstName("Giovanny");
+    window.fcWidget.user.setEmail("glutin@redprogrentis.com");
+    
+        function initFreshChat() {
+          window.fcWidget.init({
+            token: "666cd092-2a29-4f6c-82aa-e0ac8db16b8c",
+            host: "https://wchat.freshchat.com",
+            tags:["dimensionlec"],
+            config: {
+              headerProperty: {
+                         //If you have multiple sites you can use the appName and appLogo to overwrite the values.
+                         //SE MODIFICO ESTA PARTE por parte de GIO:)
+                         appName: 'Ayuda Dimension LEC',
+                         appLogo: 'http://drive.google.com/uc?export=view&id=1cw-JTp84eMJ4xScaBu8A_mhqflYdjJmg',
+                         backgroundColor: '#FFAC33',
+                        
+                     },
+                     agent: {
+                         hidePic: false,
+                         hideName: false,
+                         hideBio: true,
+                     }
+            }
+    
+          });
+        }
+        function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+      </script>
+
     <div><h1>emoji</h1>
     <div>🔍</div>
     <div>🔍</div>
