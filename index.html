@@ -24,22 +24,76 @@
           window.fcWidget.init({
             token: "666cd092-2a29-4f6c-82aa-e0ac8db16b8c",
             host: "https://wchat.freshchat.com",
-            tags:["dimensionlec"],
+            tags:["dimensionlec"],//se modifico esta parte  Gio:)
             config: {
+                disableEvents: true,
+                 cssNames: {
+                     widget: 'fc_frame',
+                     open: 'fc_open',
+                     expanded: 'fc_expanded'
+                 },
+                 showFAQOnOpen: true,
+                 hideFAQ: true,
+
               headerProperty: {
                          //If you have multiple sites you can use the appName and appLogo to overwrite the values.
-                         //SE MODIFICO ESTA PARTE por parte de GIO:)
-                         appName: 'Ayuda Dimension LEC',
-                         appLogo: 'http://drive.google.com/uc?export=view&id=1cw-JTp84eMJ4xScaBu8A_mhqflYdjJmg',
-                         backgroundColor: '#FFAC33',
+                         appName: 'Ayuda Dimension LEC', //se modifico esta parte  Gio:)
+                         appLogo: 'http://drive.google.com/uc?export=view&id=1cw-JTp84eMJ4xScaBu8A_mhqflYdjJmg',//se modifico esta parte  Gio:)
+                         backgroundColor: '#FFAC33',//se modifico esta parte  Gio:)
                         
                      },
                      agent: {
                          hidePic: false,
                          hideName: false,
-                         hideBio: true,
+                         hideBio: true,//se modifico esta parte GIO:)
+                     },
+                     content: {
+                     placeholders: {
+                         search_field: 'Buscar',
+                         reply_field: 'Responder',
+                         csat_reply: 'A&ntilde;ade tus comentarios aqu&iacute;'
+                     },
+                     actions: {
+                         csat_yes: 'Si',
+                         csat_no: 'No',
+                         push_notify_yes: 'Si',
+                         push_notify_no: 'No',
+                         tab_faq: 'Soluciones',
+                         tab_chat: 'Chat en vivo',
+                         csat_submit: 'Enviar'
+                     },
+                     headers: {
+                         chat: 'Chat with Us',
+                         chat_help: 'Escribe tus consultas.',
+                         faq: 'Art&iacute;culos de ayuda',
+                         faq_help: 'Navega por nuestros art&iacute;culos.',
+                         faq_not_available: 'No se encontraron art&iacute;culos',
+                         faq_search_not_available: 'No se encontraron art&iacute;culos para{{query}}',
+                         faq_useful: '¿Te result&oacute; &uacute;til este art&iacute;culo?',
+                         faq_thankyou: 'Agradecemos tus comentarios',
+                         faq_message_us: 'Env&iacute;anos un mensaje',
+                         push_notification: '&iexcl;No te pierdas ninguna respuesta! &iquest;Permitir notificaciones push?',
+                         csat_question: '&iquest;Hemos resuelto tus consultas?',
+                         csat_yes_question: '&iquest;C&oacute;mo calificar&iacute;as nuestra ayuda?',
+                         csat_no_question: '&iquest;C&oacute;mo podr&iacute;amos mejorar la ayuda?',
+                         csat_thankyou: 'Gracias por tu respuesta.',
+                         csat_rate_here: 'Calif&iacute;canos',
+                         channel_response: {
+                             offline: 'Lo sentimos mucho, al parecer nuestros asesores no se encuentran disponibles.',
+                             online: {
+                                 minutes: {
+                                     one: "Actualmente respondiendo en {!time!} minutos ",
+                                     more: "Normalmente responde en {!time!} minutos"
+                                 },
+                                 hours: {
+                                     one: "Actualmente respondiendo en menos de 1 hora",
+                                     more: "Actualmente respondiendo en menos de {!time!} horas",
+                                 }
+                             }
+                          }
                      }
             }
+        }
     
           });
         }
